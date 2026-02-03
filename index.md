@@ -1,6 +1,6 @@
 # <center> UniAudio 2.0: A Unified Audio Language Model with Text-Aligned Factorized Audio Tokenization </center>
 
-<center> Code and Checkpoints will be released in  </center>
+<center> Code and Checkpoints will be released in https://github.com/uniaudio2/UniAudio2.0 </center>
 
 
 
@@ -10,7 +10,7 @@ We study two foundational problems in audio language models: (1) how to design a
 To this end, we make two contributions.
 First, we propose ReasoningCodec, a discrete audio codec that factorizes audio into (i) reasoning tokens, which encode text-aligned, high-level analysis and planning representations for audio understanding and hierarchical generation, and (ii) reconstruction tokens, which encode semantic-rich acoustic cues for high-fidelity waveform reconstruction. This design yields understanding performance comparable to strong continuous representations while improving generation quality and reconstruction fidelity over prior discrete tokenizers.
 Second, we introduce a unified autoregressive architecture for text and audio, together with multi-stage training and multi-task data construction. Using this framework, we train UniAudio 2.0 on 100B text tokens and 60B audio tokens.
-Across a wide range of speech, sound, and music tasks, UniAudio 2.0 performs competitively on in-domain evaluations and demonstrates strong few-shot and zero-shot generalization to unseen tasks. 
+Across a wide range of speech, sound, and music tasks, UniAudio 2.0 performs competitively on in-domain evaluations and demonstrates strong few-shot and zero-shot generalization to unseen tasks. Demo, Code and checkpoints will be available at \href{https://uniaudio2.github.io/demo/}{https://uniaudio2.github.io/demo/}.
 
 The overview of UniAudio 2.0 as following picture shows.
 ![The overview of UniAudio 2.0](fig/overview.png)
@@ -29,7 +29,7 @@ In the following, we give the demo for each tasks.
 
 ## Audio Codec Tokenizer Reconstruction Comparison
 
-| <center> gt </center> | <center> Encodec </center> | <center> higgs-audio </center> | <center> Mimi-codec </center> | <center> XCodec </center> | <center> Ours </center> |
+| <center> Ground Truth </center> | <center> Encodec </center> | <center> higgs-audio </center> | <center> Mimi-codec </center> | <center> XCodec </center> | <center> Ours </center> |
 | ----------- | ------ | ------ | ------ | ------ | ------ |
 | <audio class="audio-player2" src="reconstruction/speech/gt/p225_001.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/encodec/p225_001.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/higging/p225_001.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/mimi/p225_001.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/xcodec/p225_001.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/ours/p225_001.wav" controls preload></audio> |
 | <audio class="audio-player2" src="reconstruction/speech/gt/p225_002.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/encodec/p225_002.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/higging/p225_002.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/mimi/p225_002.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/xcodec/p225_002.wav" controls preload></audio> | <audio class="audio-player2" src="reconstruction/speech/ours/p225_002.wav" controls preload></audio> |
@@ -63,7 +63,6 @@ In the following, we give the demo for each tasks.
 | 人来人往 | <audio class="audio-player2" src="TTS/Yue/qwen/common_voice_yue_31190824-common_voice_yue_31190840.wav" controls preload></audio> | <audio class="audio-player2" src="TTS/Yue/ours/common_voice_yue_31190824-common_voice_yue_31190840.wav" controls preload></audio> |
 | 同色至有得倾 | <audio class="audio-player2" src="TTS/Yue/qwen/common_voice_yue_31192011-common_voice_yue_31192012.wav" controls preload></audio> | <audio class="audio-player2" src="TTS/Yue/ours/common_voice_yue_31192011-common_voice_yue_31192012.wav" controls preload></audio> |
 | 你哋查唔查到呢个字 | <audio class="audio-player2" src="TTS/Yue/qwen/common_voice_yue_31192011-common_voice_yue_31192013.wav" controls preload></audio> | <audio class="audio-player2" src="TTS/Yue/ours/common_voice_yue_31192011-common_voice_yue_31192013.wav" controls preload></audio> |
-| 唔通佢系我男朋友 | <audio class="audio-player2" src="TTS/Yue/qwen/common_voice_yue_31193213-common_voice_yue_31193215.wav" controls preload></audio> | <audio class="audio-player2" src="TTS/Yue/ours/common_voice_yue_31193213-common_voice_yue_31193215.wav" controls preload></audio> |
 | 不如自己谂办法 | <audio class="audio-player2" src="TTS/Yue/qwen/common_voice_yue_31204888-common_voice_yue_31204889.wav" controls preload></audio> | <audio class="audio-player2" src="TTS/Yue/ours/common_voice_yue_31204888-common_voice_yue_31204889.wav" controls preload></audio> |
 
 ## Text-to-Sound Demo
@@ -116,7 +115,7 @@ InstructTTS: given an **instruction** (style/caption) and **content** (text), th
 
 | <center> Instruction (Style) </center> | <center> Content (Text) </center> | <center> Mimo-audio </center> | <center> Ours </center> |
 | ----------------------- | ----------- | ------ | ------ |
-| With a moderate pace, a middle-aged woman's voice carries an air of genuine enthusiasm. Her tone is strikingly expressive and animated. | In early december twenty sixteen dmitriev again broached the topic of meeting incoming administration officials with nader in january or february. | <audio class="audio-player2" src="InsturctTTS/EN/mimo/2221_13983_000000.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/EN/ours/2221_13983_000000.wav" controls preload></audio> |
+| A young adult female, brimming with enthusiasm, expresses her thoughts animatedly, her words punctuated by subtle pauses. Her slightly low-pitch voice carries a melodious tone, resonating with the passion in her words. | Help, oh help.What kind of help?Speak man?What means that?Bloody knifetis hot, it smokes. | <audio class="audio-player2" src="InsturctTTS/EN/mimo/7122_6430_000023.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/EN/ours/7122_6430_000023.wav" controls preload></audio> |
 | A middle-aged man, his voice rich with emotion and animated expressions. | On november sixteen twenty sixteen, catherine vargas, an executive assistant to kushner, received a request for a meeting with russian ambassador sergey kislyak. | <audio class="audio-player2" src="InsturctTTS/EN/mimo/2221_13983_000004.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/EN/ours/2221_13983_000004.wav" controls preload></audio> |
 
 ### InstructTTS (Chinese)
@@ -125,7 +124,6 @@ InstructTTS: given an **instruction** (style/caption) and **content** (text), th
 | ----------------------- | ----------- | ------ | ------ |
 | 语气中充满了悲伤痛苦，声音较小传递了悲痛欲绝的情绪  | 能一直选择面对,选择用尽办法来挽救我们的婚姻,我能怪他什么啊。 | <audio class="audio-player2" src="InsturctTTS/ZH/mimo/tx_xiao_0200107001042.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/ZH/ours/tx_xiao_0200107001042.wav" controls preload></audio> |
 | 悲伤逆流成河 | 一年又一年,一日复一日,一聚一离别,一生一场梦。 | <audio class="audio-player2" src="InsturctTTS/ZH/mimo/tx_emotion_00201000015.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/ZH/ours/tx_emotion_00201000015.wav" controls preload></audio> |
-| 伤心难过，又无能为力 | 心痛?要怪就怪自己,有本事爱上别人,没本事让别人爱上自己。 | <audio class="audio-player2" src="InsturctTTS/ZH/mimo/tx_emotion_00201000148.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/ZH/ours/tx_emotion_00201000148.wav" controls preload></audio> |
 | 内心对他人感到抱歉，责怪自己 | 抱歉让你认识一个这么差劲的我。 | <audio class="audio-player2" src="InsturctTTS/ZH/mimo/tx_emotion_00201000209.wav" controls preload></audio> | <audio class="audio-player2" src="InsturctTTS/ZH/ours/tx_emotion_00201000209.wav" controls preload></audio> |
 
 
@@ -149,6 +147,17 @@ Given an **audio prompt** (voice timbre), a **caption** (style description), and
 | 心痛?要怪就怪自己,有本事爱上别人,没本事让别人爱上自己。 | 伤心难过，又无能为力 | <audio class="audio-player2" src="audio_instruct_tts/ZH/prompt/tx_emotion_00201000148.wav" controls preload></audio> | <audio class="audio-player2" src="audio_instruct_tts/ZH/tx_emotion_00201000148.wav" controls preload></audio> |
 | 抱歉让你认识一个这么差劲的我。 | 内心对他人感到抱歉，责怪自己 | <audio class="audio-player2" src="audio_instruct_tts/ZH/prompt/tx_emotion_00201000209.wav" controls preload></audio> | <audio class="audio-player2" src="audio_instruct_tts/ZH/tx_emotion_00201000209.wav" controls preload></audio> |
 | 他如果真的爱你,你就不会这么难过了。 | 伤心不已，悲伤凄凉 | <audio class="audio-player2" src="audio_instruct_tts/ZH/prompt/tx_emotion_00201000274.wav" controls preload></audio> | <audio class="audio-player2" src="audio_instruct_tts/ZH/tx_emotion_00201000274.wav" controls preload></audio> |
+
+## Speech edit 
+
+Speech edit: the user asks give a speech and a prompt to modify the speech; the model responds in speech. 
+
+| <center> Sample ID </center> | <center> input speech </center> | <center> prompt </center> |<center> Ours </center> |
+| ----------------------- | ----------- | ------ | ------ |
+| 1 | <audio class="audio-player2" src="speech_edit/input/speech_edit_4_1580_141084_000076_000006.wav" controls preload></audio> | edit the speech with whisper style | <audio class="audio-player2" src="speech_edit/ours/speech_edit_4_1580_141084_000076_000006.wav" controls preload></audio> |
+| 2 | <audio class="audio-player2" src="speech_edit/input/AriaNeural_whispering_to_shouting.wav" controls preload></audio> | edit the speech with shouting style | <audio class="audio-player2" src="speech_edit/ours/AriaNeural_whispering_to_shouting.wav" controls preload></audio> |
+| 3 | <audio class="audio-player2" src="speech_edit/input/speech_edit_task_000836_speed_slow.wav" controls preload></audio> | make the speech speaking slow | <audio class="audio-player2" src="speech_edit/ours/speech_edit_task_000836_speed_slow.wav" controls preload></audio> |
+| 4 | <audio class="audio-player2" src="speech_edit/input/speech_edit_task_010405_speed_fast.wav" controls preload></audio> | make the speech speaking fast | <audio class="audio-player2" src="speech_edit/ours/speech_edit_task_010405_speed_fast.wav" controls preload></audio> |
 
 ## Dysarthric Speech Recognition (zero-shot)
 
@@ -182,6 +191,7 @@ Speech-to-text Q&A: the user asks a question in speech; the model responds in te
 | 1 | <audio class="audio-player2" src="s2t/question/helpful_base_0.wav" controls preload></audio> | Famous actors like Meryl Streep and Julia Roberts began their careers on Broadway, with Streep winning an Oscar for her performance in The Royal Family. |
 | 2 | <audio class="audio-player2" src="s2t/question/helpful_base_1.wav" controls preload></audio> | The US states got their names from Native American languages, with some names being derived from local tribes or geographical features. |
 
+
 ## One-Shot Speech Denoising (few-shot)
 
 One-shot speech denoising: given one demonstration pair (noisy source → clean target), the model denoises a query noisy clip. Below we show the demonstration (source and target), the query noisy audio, ground truth clean (GT), and outputs from Mimi and Ours.
@@ -198,10 +208,9 @@ One-shot voice conversion: given one demonstration pair (source voice → target
 
 | <center> Sample </center> | <center> Demo (Source Voice) </center> | <center> Demo (Target Voice) </center> | <center> Query </center> | <center> GT </center> | <center> Mimo-audio </center> | <center> Ours </center> |
 | ----------------------- | ----------- | ----------- | ----------- | ------ | ------ | ------ |
-| 1 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000002.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000002.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000002.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000002.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000002.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000002.wav" controls preload></audio> |
-| 2 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000007.wav" controls preload></audio> |
-| 3 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000009.wav" controls preload></audio> |
-| 4 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000011.wav" controls preload></audio> |
+| 1 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000007.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000007.wav" controls preload></audio> |
+| 2 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000009.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000009.wav" controls preload></audio> |
+| 3 | <audio class="audio-player2" src="few_shot_vc/demo/source1/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/demo/target1/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/query_audio/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/gt/task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/mimo/generation_one_shot_vc_few_shot_task_000011.wav" controls preload></audio> | <audio class="audio-player2" src="few_shot_vc/ours/generation_one_shot_vc_few_shot_task_000011.wav" controls preload></audio> |
 
 
 ## Few-Shot Sound Classification Demo
@@ -215,4 +224,25 @@ Few-shot (2-way) sound classification: given two support pairs (source1_audio �
 | 3 | For each of the following input output pairs, output is one of audio scene: [frog or clock_tick] | <audio class="audio-player2" src="few_shot_sound/demo/source1/00255.wav" controls preload></audio> | frog | <audio class="audio-player2" src="few_shot_sound/demo/source2/00255.wav" controls preload></audio> | clock_tick | <audio class="audio-player2" src="few_shot_sound/query_audio/00255.wav" controls preload></audio> | frog | frog | frog |
 | 4 | For each of the following input output pairs, output is one of audio scene: [mouse_click or cow] | <audio class="audio-player2" src="few_shot_sound/demo/source1/00427.wav" controls preload></audio> | mouse_click | <audio class="audio-player2" src="few_shot_sound/demo/source2/00427.wav" controls preload></audio> | cow | <audio class="audio-player2" src="few_shot_sound/query_audio/00427.wav" controls preload></audio> | mouse_click | cow | cow |
 | 5 | For each of the following input output pairs, output is one of audio scene: [clapping or thunderstorm] | <audio class="audio-player2" src="few_shot_sound/demo/source1/00162.wav" controls preload></audio> | thunderstorm | <audio class="audio-player2" src="few_shot_sound/demo/source2/00162.wav" controls preload></audio> | clapping | <audio class="audio-player2" src="few_shot_sound/query_audio/00162.wav" controls preload></audio> | thunderstorm | thunderstorm | thunderstorm |
+
+## Conclusion
+
+In this study, we investigate how to build a unified audio foundation model that supports both understanding and generation. We propose ReasoningCodec, which factorizes audio into reasoning tokens and reconstruction tokens, and train UniAudio 2.0 with a unified autoregressive architecture and a multi-stage, multi-task training strategy. Experiments show strong performance on seen speech, sound, and music tasks, as well as encouraging few-shot and zero-shot generalization to unseen tasks. Extensive ablation studies suggest that scaling data/task diversity and model size is key to improving generalization on unseen tasks. In the future, we plan to scale both the model and the training data to further improve generalization. 
+
+## Limitations
+
+In this study, we focus on building a multi-task audio foundation model that supports diverse audio understanding and generation tasks. It can also generalize to many unseen tasks in few-shot or zero-shot settings. However, several limitations remain.
+
+(1) To improve reconstruction quality for sound and music, we adopt a flow-based decoder to recover waveforms from semantic tokens. The multi-step decoding procedure in flow matching increases inference latency for generation. In the future, it is necessary to explore few-step decoding (e.g., two steps) to better balance quality and generation speed.
+
+(2) Although UniAudio 2.0 demonstrates the ability to handle unseen tasks, there is still room for improvement. In addition, it has not yet been shown to solve arbitrary audio-related tasks. We acknowledge that the set of supported unseen tasks is closely related to the training data. For example, the model currently cannot handle speech diarization, likely because we do not include diarization- or duration-related supervision during training.  
+
+(3) Due to limited GPU resources, we have not fully explored scaling behaviors (i.e., scaling laws) of UniAudio 2.0. We only conduct experiments on 1B- and 3B-parameter variants. In the future, scaling to 7B and larger models is a promising direction.
+
+(4) Due to the relatively limited amount of sound and music data compared to speech data, UniAudio~2.0 currently performs better on speech-related tasks. In future work, expanding and improving sound and music datasets is expected to further enhance performance in these domains.
+
+(5) This work primarily focuses on pre-training design choices, such as the audio tokenizer and the unified LLM architecture. As a result, we do not extensively investigate post-training strategies (e.g., multi-task SFT and reinforcement learning). We plan to incorporate more post-training techniques to further improve UniAudio 2.0.
+
+(6) We acknowledge that the set of compared models is not exhaustive. This is partly because many related models are not publicly available, and partly because our framework supports a broad spectrum of tasks, which makes comprehensive comparisons challenging. We respect and appreciate all prior work in this area, even if some are not explicitly discussed due to space limitations. We also do not claim that UniAudio~2.0 universally outperforms all existing approaches; instead, different model architectures, different special task design (e.g. special models for TTS, ASR, diffusion-based unified models) also offer complementary strengths. 
+
 
