@@ -2,8 +2,8 @@
 
 <p align="center">
 📦 <b>Code and Checkpoints</b>:  
-👉 <a href="https://github.com/uniaudio2/UniAudio2.0">
-https://github.com/uniaudio2/UniAudio2.0
+👉 <a href="https://github.com/yangdongchao/UniAudio2">
+https://github.com/yangdongchao/UniAudio2
 </a>
 </p>
 
