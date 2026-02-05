@@ -1,6 +1,9 @@
 # <center> UniAudio 2.0: A Unified Audio Language Model with Text-Aligned Factorized Audio Tokenization </center>
 
-<center> Code and Checkpoints will be released in [code](https://github.com/yangdongchao/UniAudio2) </center>
+<center>
+📦 Code and Checkpoints:  
+👉 [https://github.com/uniaudio2/UniAudio2.0](https://github.com/uniaudio2/UniAudio2.0)
+</center>
 
 
 
