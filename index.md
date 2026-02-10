@@ -7,7 +7,12 @@ https://github.com/yangdongchao/UniAudio2
 </a>
 </p>
 
-
+<p align="center">
+📦 <b>Paper</b>:  
+👉 <a href="https://arxiv.org/pdf/2602.04683">
+UniAudio2.0
+</a>
+</p>
 
 ## Introduction
 
